@@ -9,9 +9,9 @@ use AlibabaCloud\VersionResolverTrait;
  *
  * @package   AlibabaCloud\Rds
  *
- * @method V20140815\RdsApiResolver v20140815()
+ * @method static V20140815\RdsApiResolver v20140815()
  */
-class Rds
+class RdsVersion
 {
     use VersionResolverTrait;
 }
