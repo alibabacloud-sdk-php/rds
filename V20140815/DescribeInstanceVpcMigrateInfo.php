@@ -5,20 +5,17 @@ namespace AlibabaCloud\Rds\V20140815;
 use AlibabaCloud\Rpc;
 
 /**
- * Api DescribeBackupTasks
+ * Api DescribeInstanceVpcMigrateInfo
  *
- * @method string getBackupJobId()
  * @method string getResourceOwnerId()
- * @method string getFlag()
  * @method string getResourceOwnerAccount()
  * @method string getClientToken()
  * @method string getOwnerAccount()
+ * @method string getVpcId()
  * @method string getDBInstanceId()
- * @method string getBackupMode()
  * @method string getOwnerId()
- * @method string getBackupJobStatus()
  */
-class DescribeBackupTasks extends Rpc
+class DescribeInstanceVpcMigrateInfo extends Rpc
 {
     public $product = 'Rds';
 
@@ -29,19 +26,6 @@ class DescribeBackupTasks extends Rpc
     public $serviceCode = 'rds';
 
     /**
-     * @param string $backupJobId
-     *
-     * @return $this
-     */
-    public function withBackupJobId($backupJobId)
-    {
-        $this->data['BackupJobId'] = $backupJobId;
-        $this->options['query']['BackupJobId'] = $backupJobId;
-
-        return $this;
-    }
-
-    /**
      * @param string $resourceOwnerId
      *
      * @return $this
@@ -50,19 +34,6 @@ class DescribeBackupTasks extends Rpc
     {
         $this->data['ResourceOwnerId'] = $resourceOwnerId;
         $this->options['query']['ResourceOwnerId'] = $resourceOwnerId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $flag
-     *
-     * @return $this
-     */
-    public function withFlag($flag)
-    {
-        $this->data['Flag'] = $flag;
-        $this->options['query']['Flag'] = $flag;
 
         return $this;
     }
@@ -107,6 +78,19 @@ class DescribeBackupTasks extends Rpc
     }
 
     /**
+     * @param string $vpcId
+     *
+     * @return $this
+     */
+    public function withVpcId($vpcId)
+    {
+        $this->data['VpcId'] = $vpcId;
+        $this->options['query']['VpcId'] = $vpcId;
+
+        return $this;
+    }
+
+    /**
      * @param string $dBInstanceId
      *
      * @return $this
@@ -120,19 +104,6 @@ class DescribeBackupTasks extends Rpc
     }
 
     /**
-     * @param string $backupMode
-     *
-     * @return $this
-     */
-    public function withBackupMode($backupMode)
-    {
-        $this->data['BackupMode'] = $backupMode;
-        $this->options['query']['BackupMode'] = $backupMode;
-
-        return $this;
-    }
-
-    /**
      * @param string $ownerId
      *
      * @return $this
@@ -141,19 +112,6 @@ class DescribeBackupTasks extends Rpc
     {
         $this->data['OwnerId'] = $ownerId;
         $this->options['query']['OwnerId'] = $ownerId;
-
-        return $this;
-    }
-
-    /**
-     * @param string $backupJobStatus
-     *
-     * @return $this
-     */
-    public function withBackupJobStatus($backupJobStatus)
-    {
-        $this->data['BackupJobStatus'] = $backupJobStatus;
-        $this->options['query']['BackupJobStatus'] = $backupJobStatus;
 
         return $this;
     }

@@ -5,20 +5,19 @@ namespace AlibabaCloud\Rds\V20140815;
 use AlibabaCloud\Rpc;
 
 /**
- * Api DescribeBackupTasks
+ * Api DescribeDBInstancesWithCloudResource
  *
- * @method string getBackupJobId()
  * @method string getResourceOwnerId()
- * @method string getFlag()
+ * @method string getSecurityToken()
  * @method string getResourceOwnerAccount()
- * @method string getClientToken()
+ * @method string getRoleARN()
  * @method string getOwnerAccount()
- * @method string getDBInstanceId()
- * @method string getBackupMode()
+ * @method string getPageSize()
+ * @method string getEncryptionKey()
  * @method string getOwnerId()
- * @method string getBackupJobStatus()
+ * @method string getPageNumber()
  */
-class DescribeBackupTasks extends Rpc
+class DescribeDBInstancesWithCloudResource extends Rpc
 {
     public $product = 'Rds';
 
@@ -27,19 +26,6 @@ class DescribeBackupTasks extends Rpc
     public $method = 'POST';
 
     public $serviceCode = 'rds';
-
-    /**
-     * @param string $backupJobId
-     *
-     * @return $this
-     */
-    public function withBackupJobId($backupJobId)
-    {
-        $this->data['BackupJobId'] = $backupJobId;
-        $this->options['query']['BackupJobId'] = $backupJobId;
-
-        return $this;
-    }
 
     /**
      * @param string $resourceOwnerId
@@ -55,14 +41,14 @@ class DescribeBackupTasks extends Rpc
     }
 
     /**
-     * @param string $flag
+     * @param string $securityToken
      *
      * @return $this
      */
-    public function withFlag($flag)
+    public function withSecurityToken($securityToken)
     {
-        $this->data['Flag'] = $flag;
-        $this->options['query']['Flag'] = $flag;
+        $this->data['SecurityToken'] = $securityToken;
+        $this->options['query']['SecurityToken'] = $securityToken;
 
         return $this;
     }
@@ -81,14 +67,14 @@ class DescribeBackupTasks extends Rpc
     }
 
     /**
-     * @param string $clientToken
+     * @param string $roleARN
      *
      * @return $this
      */
-    public function withClientToken($clientToken)
+    public function withRoleARN($roleARN)
     {
-        $this->data['ClientToken'] = $clientToken;
-        $this->options['query']['ClientToken'] = $clientToken;
+        $this->data['RoleARN'] = $roleARN;
+        $this->options['query']['RoleARN'] = $roleARN;
 
         return $this;
     }
@@ -107,27 +93,27 @@ class DescribeBackupTasks extends Rpc
     }
 
     /**
-     * @param string $dBInstanceId
+     * @param string $pageSize
      *
      * @return $this
      */
-    public function withDBInstanceId($dBInstanceId)
+    public function withPageSize($pageSize)
     {
-        $this->data['DBInstanceId'] = $dBInstanceId;
-        $this->options['query']['DBInstanceId'] = $dBInstanceId;
+        $this->data['PageSize'] = $pageSize;
+        $this->options['query']['PageSize'] = $pageSize;
 
         return $this;
     }
 
     /**
-     * @param string $backupMode
+     * @param string $encryptionKey
      *
      * @return $this
      */
-    public function withBackupMode($backupMode)
+    public function withEncryptionKey($encryptionKey)
     {
-        $this->data['BackupMode'] = $backupMode;
-        $this->options['query']['BackupMode'] = $backupMode;
+        $this->data['EncryptionKey'] = $encryptionKey;
+        $this->options['query']['EncryptionKey'] = $encryptionKey;
 
         return $this;
     }
@@ -146,14 +132,14 @@ class DescribeBackupTasks extends Rpc
     }
 
     /**
-     * @param string $backupJobStatus
+     * @param string $pageNumber
      *
      * @return $this
      */
-    public function withBackupJobStatus($backupJobStatus)
+    public function withPageNumber($pageNumber)
     {
-        $this->data['BackupJobStatus'] = $backupJobStatus;
-        $this->options['query']['BackupJobStatus'] = $backupJobStatus;
+        $this->data['PageNumber'] = $pageNumber;
+        $this->options['query']['PageNumber'] = $pageNumber;
 
         return $this;
     }
