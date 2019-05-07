@@ -8,14 +8,16 @@ use AlibabaCloud\Rpc;
 /**
  * Resolve Api based on the method name.
  *
- * @method AssociateServiceUseSecurityIpWithCustins associateServiceUseSecurityIpWithCustins(array $options = [])
- * @method GetServiceSecurityList getServiceSecurityList(array $options = [])
- * @method UpdateServiceSecurityList updateServiceSecurityList(array $options = [])
- * @method GetServiceUseSecirityIP getServiceUseSecirityIP(array $options = [])
- * @method CreateServiceUseSecurityIP createServiceUseSecurityIP(array $options = [])
- * @method DescribeCrossRegionBackupDBInstance describeCrossRegionBackupDBInstance(array $options = [])
- * @method DescribeAvailableCrossRegion describeAvailableCrossRegion(array $options = [])
+ * @method ModifyInstanceDdrPolicy modifyInstanceDdrPolicy(array $options = [])
+ * @method DescribeInstanceDdrPolicy describeInstanceDdrPolicy(array $options = [])
+ * @method DescribeCrossRegionLogBackupFiles describeCrossRegionLogBackupFiles(array $options = [])
+ * @method DescribeCrossRegionBackups describeCrossRegionBackups(array $options = [])
  * @method DescribeAvailableRecoveryTime describeAvailableRecoveryTime(array $options = [])
+ * @method DescribeAvailableCrossRegion describeAvailableCrossRegion(array $options = [])
+ * @method EvaluateSupportByokShow evaluateSupportByokShow(array $options = [])
+ * @method EvaluteSupportByokShow evaluteSupportByokShow(array $options = [])
+ * @method GetServiceSecurityList getServiceSecurityList(array $options = [])
+ * @method GetServiceUseSecirityIP getServiceUseSecirityIP(array $options = [])
  * @method DescribeInstanceVpcMigrateInfo describeInstanceVpcMigrateInfo(array $options = [])
  * @method DescribeReadDBInstanceDelay describeReadDBInstanceDelay(array $options = [])
  * @method RestoreTable restoreTable(array $options = [])
@@ -185,22 +187,176 @@ class V20140815Rpc extends Rpc
 }
 
 /**
+ * @method string getDBInstanceName()
+ * @method $this withDBInstanceName($value)
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
- * @method string getSecurityToken()
- * @method $this withSecurityToken($value)
+ * @method string getRetentType()
+ * @method $this withRetentType($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getLogBackupEnabled()
+ * @method $this withLogBackupEnabled($value)
+ * @method string getBackupEnabled()
+ * @method $this withBackupEnabled($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getStorageType()
+ * @method $this withStorageType($value)
+ * @method string getEndpoint()
+ * @method $this withEndpoint($value)
+ * @method string getDdrRegion()
+ * @method $this withDdrRegion($value)
+ * @method string getStorageOwner()
+ * @method $this withStorageOwner($value)
+ * @method string getRegion()
+ * @method $this withRegion($value)
+ * @method string getDdrType()
+ * @method $this withDdrType($value)
+ * @method string getRetention()
+ * @method $this withRetention($value)
+ */
+class ModifyInstanceDdrPolicy extends V20140815Rpc
+{
+}
+
+/**
+ * @method string getDBInstanceName()
+ * @method $this withDBInstanceName($value)
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ */
+class DescribeInstanceDdrPolicy extends V20140815Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ * @method string getEndTime()
+ * @method $this withEndTime($value)
+ * @method string getDBInstanceId()
+ * @method $this withDBInstanceId($value)
+ * @method string getStartTime()
+ * @method $this withStartTime($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getCrossBackupRegion()
+ * @method $this withCrossBackupRegion($value)
+ * @method string getPageNumber()
+ * @method $this withPageNumber($value)
+ */
+class DescribeCrossRegionLogBackupFiles extends V20140815Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ * @method string getPageNumbers()
+ * @method $this withPageNumbers($value)
+ * @method string getEndTime()
+ * @method $this withEndTime($value)
+ * @method string getDBInstanceId()
+ * @method $this withDBInstanceId($value)
+ * @method string getStartTime()
+ * @method $this withStartTime($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getCrossBackupRegion()
+ * @method $this withCrossBackupRegion($value)
+ */
+class DescribeCrossRegionBackups extends V20140815Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getCrossBackupId()
+ * @method $this withCrossBackupId($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ */
+class DescribeAvailableRecoveryTime extends V20140815Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ */
+class DescribeAvailableCrossRegion extends V20140815Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getNodeType()
+ * @method $this withNodeType($value)
  * @method string getResourceOwnerAccount()
  * @method $this withResourceOwnerAccount($value)
  * @method string getOwnerAccount()
  * @method $this withOwnerAccount($value)
- * @method string getDBInstanceId()
- * @method $this withDBInstanceId($value)
+ * @method string getEngineVersion()
+ * @method $this withEngineVersion($value)
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
- * @method string getServiceId()
- * @method $this withServiceId($value)
+ * @method string getSecurityToken()
+ * @method $this withSecurityToken($value)
+ * @method string getEngine()
+ * @method $this withEngine($value)
+ * @method string getTargetRegionId()
+ * @method $this withTargetRegionId($value)
+ * @method string getDbInstanceStorageType()
+ * @method $this withDbInstanceStorageType($value)
  */
-class AssociateServiceUseSecurityIpWithCustins extends V20140815Rpc
+class EvaluateSupportByokShow extends V20140815Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getNodeType()
+ * @method $this withNodeType($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getEngineVersion()
+ * @method $this withEngineVersion($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getSecurityToken()
+ * @method $this withSecurityToken($value)
+ * @method string getEngine()
+ * @method $this withEngine($value)
+ * @method string getDbInstanceStorageType()
+ * @method $this withDbInstanceStorageType($value)
+ * @method string getRegion()
+ * @method $this withRegion($value)
+ */
+class EvaluteSupportByokShow extends V20140815Rpc
 {
 }
 
@@ -223,30 +379,6 @@ class GetServiceSecurityList extends V20140815Rpc
 }
 
 /**
- * @method string getSecurityIPList()
- * @method $this withSecurityIPList($value)
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getSecurityToken()
- * @method $this withSecurityToken($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getOwnerAccount()
- * @method $this withOwnerAccount($value)
- * @method string getNetType()
- * @method $this withNetType($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- * @method string getServiceId()
- * @method $this withServiceId($value)
- * @method string getGroupName()
- * @method $this withGroupName($value)
- */
-class UpdateServiceSecurityList extends V20140815Rpc
-{
-}
-
-/**
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
  * @method string getSecurityToken()
@@ -261,46 +393,6 @@ class UpdateServiceSecurityList extends V20140815Rpc
  * @method $this withOwnerId($value)
  */
 class GetServiceUseSecirityIP extends V20140815Rpc
-{
-}
-
-/**
- * @method string getOwnerEmail()
- * @method $this withOwnerEmail($value)
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getSecurityToken()
- * @method $this withSecurityToken($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getOwnerAccount()
- * @method $this withOwnerAccount($value)
- * @method string getContact()
- * @method $this withContact($value)
- * @method string getName()
- * @method $this withName($value)
- * @method string getExportInfoToUser()
- * @method $this withExportInfoToUser($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- */
-class CreateServiceUseSecurityIP extends V20140815Rpc
-{
-}
-
-class DescribeCrossRegionBackupDBInstance extends V20140815Rpc
-{
-}
-
-class DescribeAvailableCrossRegion extends V20140815Rpc
-{
-}
-
-/**
- * @method string getBackupId()
- * @method $this withBackupId($value)
- */
-class DescribeAvailableRecoveryTime extends V20140815Rpc
 {
 }
 
@@ -6843,8 +6935,6 @@ class CreateTempDBInstance extends V20140815Rpc
  * @method $this withResourceOwnerAccount($value)
  * @method string getOwnerAccount()
  * @method $this withOwnerAccount($value)
- * @method string getCompressType()
- * @method $this withCompressType($value)
  * @method string getDBInstanceId()
  * @method $this withDBInstanceId($value)
  * @method string getOwnerId()
@@ -7451,46 +7541,54 @@ class ModifyDBDescription extends V20140815Rpc
 }
 
 /**
- * @method string getPreferredBackupPeriod()
- * @method $this withPreferredBackupPeriod($value)
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
  * @method string getLocalLogRetentionHours()
  * @method $this withLocalLogRetentionHours($value)
- * @method string getOwnerAccount()
- * @method $this withOwnerAccount($value)
  * @method string getLogBackupFrequency()
  * @method $this withLogBackupFrequency($value)
- * @method string getCompressType()
- * @method $this withCompressType($value)
  * @method string getBackupLog()
  * @method $this withBackupLog($value)
- * @method string getLocalLogRetentionSpace()
- * @method $this withLocalLogRetentionSpace($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- * @method string getDuplication()
- * @method $this withDuplication($value)
- * @method string getPreferredBackupTime()
- * @method $this withPreferredBackupTime($value)
- * @method string getBackupRetentionPeriod()
- * @method $this withBackupRetentionPeriod($value)
  * @method string getDuplicationContent()
  * @method $this withDuplicationContent($value)
  * @method string getHighSpaceUsageProtection()
  * @method $this withHighSpaceUsageProtection($value)
  * @method string getDBInstanceId()
  * @method $this withDBInstanceId($value)
+ * @method string getEnableBackupLog()
+ * @method $this withEnableBackupLog($value)
+ * @method string getEnableCrossRegionLogBackup()
+ * @method $this withEnableCrossRegionLogBackup($value)
+ * @method string getBackupPolicyMode()
+ * @method $this withBackupPolicyMode($value)
+ * @method string getPreferredBackupPeriod()
+ * @method $this withPreferredBackupPeriod($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getCompressType()
+ * @method $this withCompressType($value)
+ * @method string getLocalLogRetentionSpace()
+ * @method $this withLocalLogRetentionSpace($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getCrossBackupRegion()
+ * @method $this withCrossBackupRegion($value)
+ * @method string getDuplication()
+ * @method $this withDuplication($value)
+ * @method string getPreferredBackupTime()
+ * @method $this withPreferredBackupTime($value)
+ * @method string getBackupRetentionPeriod()
+ * @method $this withBackupRetentionPeriod($value)
+ * @method string getCrossRegionBackupRetention()
+ * @method $this withCrossRegionBackupRetention($value)
+ * @method string getEnableCrossRegionBackup()
+ * @method $this withEnableCrossRegionBackup($value)
  * @method string getDuplicationLocation()
  * @method $this withDuplicationLocation($value)
  * @method string getLogBackupRetentionPeriod()
  * @method $this withLogBackupRetentionPeriod($value)
- * @method string getEnableBackupLog()
- * @method $this withEnableBackupLog($value)
- * @method string getBackupPolicyMode()
- * @method $this withBackupPolicyMode($value)
  */
 class ModifyBackupPolicy extends V20140815Rpc
 {
