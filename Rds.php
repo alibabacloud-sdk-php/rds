@@ -5,8 +5,8 @@ namespace AlibabaCloud\Rds;
 use AlibabaCloud\Client\Resolver\VersionResolver;
 
 /**
- * @deprecated
+ * @method static V20140815\RdsApiResolver v20140815()
  */
-class RdsVersion extends VersionResolver
+class Rds extends VersionResolver
 {
 }
